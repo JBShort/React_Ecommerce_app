@@ -3,7 +3,7 @@ const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 
 module.exports = {
-    registor: (req, res) => {
+    register: (req, res) => {
         const user = new User(req.body);
         user.save().then(() => {
             res.cookie(
